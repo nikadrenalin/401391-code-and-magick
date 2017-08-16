@@ -58,7 +58,6 @@ window.renderStatistics = function (ctx, names, times) {
 
   // Print rectangle
   function printRect(canvas, x, y, width, height, color) {
-    var test = color || 'black';
     canvas.beginPath();
     canvas.rect(x, y, width, height);
     canvas.fillStyle = color || 'black';
