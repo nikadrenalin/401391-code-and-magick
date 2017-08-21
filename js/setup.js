@@ -1,6 +1,8 @@
-'use strict';
+/* jshint browser: true */
 
 (function () {
+	"use strict";
+	
 	var setup = document.querySelector('.setup'),
 		template = document.querySelector('template#similar-wizard-template'),
 		personagesWrapper = document.querySelector('.setup-similar'),
@@ -35,7 +37,9 @@
 			obj = {},
 			result = [];
 
-		count ? countObjs = count : countObjs = 4;
+		if (!count) {
+			countObjs = 4;
+		}
 
 		for (i; i < countObjs; i++) {
 			obj.name = names[Math.floor(Math.random() * names.length)] + ' ' + lastnames[Math.floor(Math.random() * lastnames.length)];
